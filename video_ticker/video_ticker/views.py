@@ -29,7 +29,7 @@ def download_video(request):
     video_path = 'video.mp4'
 
     if os.path.exists(video_path):
-        message = request.GET.get("text")
+        message = str(request.GET.get("text", 1))
         create_video(message)
         filename = os.path.basename(video_path)
         chunk_size = 8192
