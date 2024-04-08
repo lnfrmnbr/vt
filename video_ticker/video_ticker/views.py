@@ -20,7 +20,7 @@ def create_video(message):
     font_color = (255, 255, 255)
     for t in range(72):
         frame.fill(0)
-        x -= 8*(len(message))+5
+        x -= 9*(len(message))
         cv2.putText(frame, message, (x, y), font, font_scale, font_color, font_thickness)
         out.write(frame)
     out.release()
